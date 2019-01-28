@@ -1,0 +1,99 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+	<div class="row top-menu">
+        <div class="col-md-6">
+		<a href="{{url_for('showCarBrands')}}">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
+		</a>
+	</div>
+			
+
+	<div class="col-md-6 text-right">
+		<a href="{{url_for('showLogin')}}">
+		<span class="glyphicon glyphicon-log-in"aria-hidden="true"></span>login 
+	</a>
+	</div>
+</div>
+	
+
+
+<div class="row top-menu">
+	<div class="col-md-8 text-right font-weight-bold">
+		<p id="headerx"> MyJapanese Cars Catalog<p>
+	</div>
+	<div class="col-md-3">
+		
+	</div>
+
+	<div class="col-md-1 text-right">
+	</div>
+</div>
+
+
+	<div class="row padding-top padding-bottom ">
+		<div class="col-md-3"> </div>
+		<div class="col-md-9 ">
+		</div>
+
+	</div>
+
+	
+
+
+
+	<div class="row banner main">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			
+		</div>
+	</div>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+	
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 padding-none">
+			
+			</a>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+
+
+	
+			<div class="row">
+				<div class="col-md-4">
+				 <a href="/carbrand/1/">
+               	<img src="/static/Toyota-logo.png" width="240" height="180" title="Toyota" alt="car">
+               </a>
+               </div>
+					<div class="col-md-4 ">
+						<a href="/carbrand/2/">
+                        <img src="/static/Nissan-logo.png" alt="Nissan" width="240" height="180">
+                       </a>
+					</div>
+				<div class="col-md-4">
+					<a href="/carbrand/3/">
+                 <img src="/static/Honda-logo.png" alt="Honda" width="240" height="180">
+                   </a>
+
+				</div>
+			</div>
+		
+	
+{% endblock %}
